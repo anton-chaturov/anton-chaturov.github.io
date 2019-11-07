@@ -1,3 +1,5 @@
+*
+    box-sizing: border-box
 body
     font-family: sans-serif
 img 
@@ -11,11 +13,32 @@ img
 @media (max-width: 768px)
     .container
         max-width: 750px
-        width: 95%
+        width: 90%
       
 .button
     border-radius: 10px
     background-color:#ffd200
     padding: 18px 30px
     border: none
-    margin-right: 30px
+    
+    &:hover
+        background-color: lighten(#ffd200,10%)
+        coursor:pointer
+.section
+    padding: 90px 0    
+    &-title
+        font-size: 24px
+        text-align: center
+    &-subtitle
+        font-size: 16px      
+.input
+    border: 1px solid #dddddd  
+    border-radius: 10px    
+    padding: 20px 26px       
+.arrows
+    &__portfolio
+       max-width: 120px
+       margin: auto
+       margin-top: 68px
+       display: flex
+       justify-content: space-between 

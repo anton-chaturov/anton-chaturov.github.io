@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 
+	<link rel="stylesheet" href="css/slick.css">
+
 </head>
 <body>
 	
@@ -19,11 +21,11 @@
 				<!-- /.navbar__logo -->
 				<div class="navbar__info">
 					<div class="navbar__contacts">
-					  <span class="navbar__adress">Калуга, Москва, МО</span> 
-					 <a href="tel:+7 (495) 42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
+						<span class="navbar__adress">Казань,Гладилова 21</span>
+						<a href="tel:89061127640" class="navbar__phone">89061127640</a>
 					</div>
 					<!-- /.navbar__contacts -->
-					<button class="button navbar__button">Перезвоните мне</button> 
+					<button class="button navbar__button" id="button">Перезвоните мне</button>
 					<!-- /.button navbar__button -->
 				</div>
 				<!-- /.navbar__info -->
@@ -33,5 +35,145 @@
 		<!-- /.container -->
 	</nav>
 	<!-- /.navbar -->
+	<main>
+		<section class="hero">
+			<div class="container">
+				<div class="hero-block">
+					<div class="hero-text">
+						<h1 class="hero-text__title">Внутренняя отделка
+							помещений "под ключ"</h1>
+						<span class="hero-text__subtitle">с гарантией качества, прописанной в договоре</span>
+						<ul class="hero-list">
+							<li class="hero-list__item">
+								<div class="hero-list__image">
+									<img src="img/clock.png" alt="clock">
+								</div>
+								<span class="hero-list__text">Точно соблюдаем сроки</span>
+							</li>
+							<li class="hero-list__item">
+								<div class="hero-list__image">
+									<img src="img/calculator.png" alt="calculator">
+								</div>
+								<span class="hero-list__text">Рассчитаем смету на работы
+									и материалы в день обращения</span>
+							</li>
+							<li class="hero-list__item">
+								<div class="hero-list__image">
+									<img src="img/paint.png" alt="paint">
+								</div>
+								<span class="hero-list__text">Предложим более 100 вариантов
+									исполнения дизайна Вашего жилья</span>
+							</li>
+						</ul>
+					</div>
+					<!-- /.hero-text -->
+					<div class="hero-image">
+						<img src="img/plan.png" alt="Пдан квартиры">
+					</div>
+					<!-- /.hero-image -->
+		
+				</div>
+				<!-- /.hero-block -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.hero -->	
+		<section class="offer section">
+			<div class="container">
+				<div class="offer-block">
+					<h2 class="section-title offer__title">Мы бесплатно разработаем
+						дизайн-проект Вашего жилья
+						и реализуем его!</h2>
+					<!-- /.section-title -->
+					<span class="section-subtitle offer__subtitle">Оставьте заявку на разработку
+						бесплатного дизайн-проекта!</span>
+					<!-- /.section-subtitle -->
+					<form action="#" class="form offer-form">
+						<input type="text" class="input offer__input" placeholder="Ваше имя">
+						<input type="tell" class="input offer__input" placeholder="Ваш телефон">
+						<button class="button offer__button" id="button">Получить бесплатный дизайн-проект</button>
+					</form>
+		
+					<!-- /.form offer-form -->
+				</div>
+				<!-- /.offer-block -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.offer -->
+		<section class="section portfolio">
+			<div class="container">
+				<h2 class="section-title portfolio__title">Работая с 2007 года,
+				мы сделали более 500 ремонтов в квартирах и домах</h2>
+				<div class="slider">
+				<div class=" slider__item"><img class="slider__image" src="/img/portfolio_1.png" alt=""></div>
+				<!-- /.slider sider__item -->
+				<div class=" slider__item"><img class="slider__image" src="/img/portfolio_2.png" alt=""></div>
+				<!-- /.slider sider__item -->
+				<div class=" slider__item"><img class="slider__image" src="/img/portfolio_3.png" alt=""></div>
+				<!-- /.slider sider__item -->
+				<div class=" slider__item"><img class="slider__image" src="/img/portfolio_1.png" alt=""></div>
+				<!-- /.slider sider__item -->
+				<div class=" slider__item"><img class="slider__image" src="/img/portfolio_2.png" alt=""></div>
+				<!-- /.slider sider__item -->
+				<div class=" slider__item"><img class="slider__image" src="/img/portfolio_3.png" alt=""></div>
+				<!-- /.slider sider__item -->
+				</div>
+				<div class="arrows portfolio_arrows">
+					<div class="arrows__left"><img src="img/left-arrow.png" alt=""></div>
+					<div class="arrows__right"><img src="img/right-arrow.png" alt=""></div>	
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.section portfolio -->
+	</main>
+	<!-- /.main -->
+	<div class="modal" id="modal">
+		<div class="modal-dialog">
+				<h4 class="modal-dialog__title">Всплывающее окно</h4>	
+				<button class="modal-dialog__close" id="close">&times;</button>
+		</div>
+		<!-- /.modal-dailog -->
+	</div>
+	<!-- /.modal -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/slick.min.js"> </script>
+	<script>
+	  $(document).ready(function() {
+	    $('.slider').slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  prevArrow $('.arrows__left'),
+		  nextArrow $('.arrows__right'),
+		  responsive [
+			  {
+				  breakpoint: 0,
+				  settings: {
+					  slidesToShow: 1,
+					  slidesToScroll: 1
+				  }
+				},
+				{
+			  breakpoint: 576,
+			  settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 1200,
+			  settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 1
+			  }
+			}
+		  ]
+	    });
+	  });
+	</script>
 </body>
 </html>
